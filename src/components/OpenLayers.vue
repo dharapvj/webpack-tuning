@@ -6,19 +6,27 @@
 </template>
 
 <script>
-import ol from 'openlayers';
+// improvement: load only what you need from openlayers (ol for es2015)
+// import ol from 'openlayers';
+import TileLayer from 'ol/layer/tile';
+import Map from 'ol/map';
+import View from 'ol/view';
+import OSM from 'ol/source/osm';
+import proj from 'ol/proj';
+
+const iiscLocation = proj.fromLonLat([77.568340, 13.013510]);
 
 const drawMap = () => {
   /* eslint-disable no-new */
-  new ol.Map({
+  new Map({
     target: 'map',
     layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM(),
+      new TileLayer({
+        source: new OSM(),
       }),
     ],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([77.568340, 13.013510]),
+    view: new View({
+      center: iiscLocation,
       zoom: 18,
     }),
   });

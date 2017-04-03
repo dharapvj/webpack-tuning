@@ -22,7 +22,8 @@ let mobile = _.pick(iphone,['RAM', 'screen']);
 </template>
 
 <script>
-import _ from 'lodash';
+// improvement: load only what you need from lodash.
+import pick from 'lodash/pick';
 
 const iphone = {
   RAM: '8gb',
@@ -30,7 +31,7 @@ const iphone = {
   screen: 'touch',
   lightning: true,
 };
-const mobile = _.pick(iphone, ['RAM', 'screen']);
+const mobile = pick(iphone, ['RAM', 'screen']);
 
 export default {
   data() {

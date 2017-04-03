@@ -1,10 +1,10 @@
 <template src="./landing/template.html"></template>
 
 <script>
-import Moment from '@/components/Moment';
+/* import Moment from '@/components/Moment';
 import Lodash from '@/components/Lodash';
 import OpenLayers from '@/components/OpenLayers';
-import D3 from '@/components/D3';
+import D3 from '@/components/D3';*/
 
 export default {
   data() {
@@ -19,12 +19,19 @@ export default {
     },
   },
   components: {
-    Moment,
+    /* Moment,
     Lodash,
     D3,
-    OpenLayers,
+    OpenLayers, */
+    // Improvement: Lazy load all the individual pages...
+    // thereby reduce 1st page load bundle size dramatically!
+    Moment: () => import('@/components/Moment'),
+    Lodash: () => import('@/components/Lodash'),
+    D3: () => import('@/components/D3'),
+    OpenLayers: () => import('@/components/OpenLayers'),
   },
 };
 </script>
 
-<style src="bootstrap/dist/css/bootstrap.min.css"></style>
+<!-- Improvement: load customized SCSS file for bootstrap, loading only what you need. -->
+<style lang="scss" src="./landing/bootstrap-custom.scss"></style>

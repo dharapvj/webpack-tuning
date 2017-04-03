@@ -22,7 +22,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      // improvement for dropping vue compiler
+      // 'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
   },
@@ -78,7 +79,8 @@ module.exports = {
       }
     ]
   },
-  /*plugins:[
+  // improvement for Momentjs locales
+  plugins:[
     new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en)$/)
-  ]*/
+  ]
 }

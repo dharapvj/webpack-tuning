@@ -14,8 +14,10 @@
     "bootstrap-sass": "^3.3.7",
     "core-js": "^2.4.1",
     "d3": "^4.7.4",
+    "d3-selection": "^1.0.5",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
+    "ol": "^4.0.1-beta.2",
     "openlayers": "^4.0.1",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"

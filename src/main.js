@@ -10,6 +10,8 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App },
+  // change required to drop the vue compiler
+  render: h => h(App),
+  //template: '<App/>',
+  //components: { App },
 });
