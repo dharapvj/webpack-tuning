@@ -49,6 +49,7 @@ module.exports = {
         include: [resolve('src'), resolve('test')],
         options: {
           plugins: ['lodash'],
+          cacheDirectory: resolve('babelCache'),
           presets: [
             [
               'env', { 
