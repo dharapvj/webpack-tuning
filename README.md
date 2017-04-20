@@ -26,6 +26,7 @@ After cloning the repo, checkout the un-tuned version
     npm run build --report
 
 Then checkout the tuned version
+
     git checkout optimized
     # run the app & check network tab for file sizes
     npm run dev 
