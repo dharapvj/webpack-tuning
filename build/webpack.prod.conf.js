@@ -8,7 +8,6 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-// var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 var env = config.build.env
 
@@ -80,12 +79,6 @@ var webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     }),
-    /*new webpack.optimize.CommonsChunkPlugin({
-      async: true,
-      children: true,
-      minChunks:2
-      // filename: "commonlazy.js"
-    }),*/
     // copy custom static assets
     new CopyWebpackPlugin([
       {
@@ -94,7 +87,6 @@ var webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    // new LodashModuleReplacementPlugin
   ]
 })
 

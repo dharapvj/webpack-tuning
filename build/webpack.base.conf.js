@@ -48,6 +48,7 @@ module.exports = {
         include: [resolve('src'), resolve('test')],
         options: {
           plugins: ['lodash'],
+          cacheDirectory: resolve('babelCache'),
           presets: [
             [
               'env', { 
@@ -78,7 +79,4 @@ module.exports = {
       }
     ]
   },
-  /*plugins:[
-    new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en)$/)
-  ]*/
 }
