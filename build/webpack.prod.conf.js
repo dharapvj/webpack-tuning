@@ -118,7 +118,14 @@ if (config.build.productionGzip) {
 
 if (config.build.bundleAnalyzerReport) {
   var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
+  webpackConfig.plugins.push(new BundleAnalyzerPlugin({
+    analyzerMode:'static',
+    generateStatsFile: true,
+    statsOptions: {
+      chunkModules: true,
+      source: false
+    }
+  }))
 }
 
 module.exports = webpackConfig
