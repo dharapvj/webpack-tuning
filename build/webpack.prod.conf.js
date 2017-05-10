@@ -124,6 +124,10 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin({
     analyzerMode:'static',
     generateStatsFile: true,
+    statsOptions: {
+      chunkModules: true,
+      source: false
+    }
   }))
 }
 
