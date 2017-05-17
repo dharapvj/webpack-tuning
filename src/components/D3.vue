@@ -7,12 +7,11 @@
 
 <script>
 // improvement: import only what you need from D3
-import { select } from 'd3-selection';
-// import * as d3 from 'd3';
+import { select as d3Select } from 'd3-selection';
 
 // d3.select('body').append('p');
 const drawRect = () => {
-  select('.d3root')
+  d3Select('.d3root')
     .append('svg')
       .attr('width', 960)
       .attr('height', 400)

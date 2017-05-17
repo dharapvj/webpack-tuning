@@ -82,6 +82,6 @@ module.exports = {
   },
   // improvement for Momentjs locales
   plugins:[
-    new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en)$/)
+    new webpack.ContextReplacementPlugin(/moment[\\\/]locale$/, /^\.\/(en|hi|mr)$/)
   ]
 }

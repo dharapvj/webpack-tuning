@@ -1,11 +1,6 @@
 <template src="./landing/template.html"></template>
 
 <script>
-/* import Moment from '@/components/Moment';
-import Lodash from '@/components/Lodash';
-import OpenLayers from '@/components/OpenLayers';
-import D3 from '@/components/D3';*/
-
 export default {
   data() {
     return {
@@ -19,10 +14,6 @@ export default {
     },
   },
   components: {
-    /* Moment,
-    Lodash,
-    D3,
-    OpenLayers, */
     // Improvement: Lazy load all the individual pages...
     // thereby reduce 1st page load bundle size dramatically!
     Moment: () => import('@/components/Moment'),
