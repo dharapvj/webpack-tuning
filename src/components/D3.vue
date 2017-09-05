@@ -12,14 +12,14 @@ import * as d3 from 'd3';
 const drawRect = () => {
   d3.select('.d3root')
     .append('svg')
-      .attr('width', 960)
-      .attr('height', 400)
+    .attr('width', 960)
+    .attr('height', 400)
     .append('g')
-      .attr('transform', 'translate(20,20)')
+    .attr('transform', 'translate(20,20)')
     .append('rect')
-      .attr('width', 920)
-      .attr('height', 360)
-      .attr('fill', 'aquamarine');
+    .attr('width', 920)
+    .attr('height', 360)
+    .attr('fill', 'aquamarine');
 };
 
 export default {
