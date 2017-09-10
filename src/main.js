@@ -12,6 +12,6 @@ new Vue({
   router,
   // change required to drop the vue compiler
   render: h => h(App),
-  //template: '<App/>',
-  //components: { App },
+  // template: '<App/>',
+  // components: { App },
 });

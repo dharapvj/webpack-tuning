@@ -5,8 +5,8 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
+# install dependencies ( --no-optional for windows npm v5.4)
+npm install --no-optional
 
 # serve with hot reload at localhost:8080
 npm run dev
